@@ -115,30 +115,6 @@ function About() {
                                 </motion.div>
                             ))}
                         </motion.div>
-
-                        <motion.div
-                            className="about-actions"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                        >
-                            <motion.a
-                                href="#projects"
-                                className="btn-primary"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                View My Work
-                            </motion.a>
-                            <motion.button
-                                onClick={downloadCVAsHTML}
-                                className="btn-secondary"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                Download CV (ATS)
-                            </motion.button>
-                        </motion.div>
                     </motion.div>
 
                     <motion.div
