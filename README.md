@@ -1,4 +1,36 @@
-# Getting Started with Create React App
+# My Portfolio
+
+A modern, responsive portfolio website built with React and Framer Motion.
+
+## 🚀 Deployment
+
+This project is ready to deploy on multiple platforms:
+
+### Deploy to Vercel (Recommended)
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the prompts
+
+Or use the Vercel website:
+1. Go to [vercel.com](https://vercel.com)
+2. Import your GitHub repository
+3. Deploy automatically
+
+### Deploy to Netlify
+1. Install Netlify CLI: `npm i -g netlify-cli`
+2. Run: `netlify deploy --prod`
+
+Or drag and drop the `build` folder to [netlify.com/drop](https://app.netlify.com/drop)
+
+### Deploy to GitHub Pages
+1. Add to package.json: `"homepage": "https://[username].github.io/[repo-name]"`
+2. Install: `npm install --save-dev gh-pages`
+3. Add scripts:
+   - `"predeploy": "npm run build"`
+   - `"deploy": "gh-pages -d build"`
+4. Run: `npm run deploy`
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
