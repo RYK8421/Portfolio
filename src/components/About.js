@@ -151,15 +151,14 @@ function About() {
                                         <div className="window-title">about-me.js</div>
                                     </div>
                                     <div className="code-content">
-                                        <pre>{`const developer = {
-                                            name: "Ridu Krishna",
-                                            role: "Frontend Developer",
-                                            location: "Kerala, India",
-                                            specialization: "React.js & React Native",
-                                            skills: ["React Native", "Expo", "Firebase"],
-                                            motto: "Building seamless mobile experiences"
-                                            };`}
-                                        </pre>
+                                    <pre>{`const developer = {
+  name: "Ridu Krishna",
+  role: "Frontend Developer",
+  location: "Kerala, India",
+  specialization: "React.js & React Native",
+  skills: ["React Native", "Expo", "Firebase"],
+  motto: "Building seamless mobile experiences"
+};`}</pre>
                                     </div>
                                 </div>
                             </div>

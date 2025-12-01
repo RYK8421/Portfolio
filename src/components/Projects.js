@@ -163,7 +163,7 @@ function Projects() {
                                         <span key={index} className="tech-tag">{tech}</span>
                                     ))}
                                 </div>
-
+{/* 
                                 <div className="project-links">
                                     <a
                                         href={project.liveUrl}
@@ -181,7 +181,7 @@ function Projects() {
                                     >
                                         GitHub
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="project-glow"></div>

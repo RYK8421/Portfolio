@@ -4,9 +4,9 @@ export const generateATSFriendlyCV = () => {
     name: "Ridu Krishna",
     title: "Frontend Developer",
     contact: {
-      email: "ridukrishna@example.com",
-      phone: "+91 XXXXX XXXXX",
-      location: "Kerala, India",
+      email: "ridu3668@gmail.com",
+      phone: "+91 8139008554",
+      location: "Kozhikode, Kerala, India",
       linkedin: "linkedin.com/in/ridukrishna",
       github: "github.com/ridukrishna"
     },
@@ -211,7 +211,7 @@ export const downloadCVAsHTML = () => {
   const url = window.URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'Ridu_Krishna_CV_ATS.html';
+  link.download = 'Ridu_Krishna_CV.html';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

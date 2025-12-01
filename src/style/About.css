@@ -10,6 +10,7 @@
   max-width: 1200px;
   margin: 0 auto;
       margin-bottom: 50px;
+      margin-top:5rem;
 
 }
 
@@ -258,14 +259,23 @@
 .code-content {
   padding: 1.5rem;
   background: rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.code-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .code-content pre {
   margin: 0;
   color: var(--primary-color);
   font-size: 0.8rem;
-  line-height: 1.4;
+  line-height: 1.6;
   font-family: "Courier New", monospace;
+  white-space: pre;
+  word-wrap: normal;
 }
 
 /* Animations */

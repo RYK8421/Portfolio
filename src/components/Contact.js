@@ -34,25 +34,25 @@ const Contact = () => {
         {
             icon: '📧',
             title: 'Email',
-            value: '[Your Email]',
-            link: 'mailto:[your-email]'
+            value: 'ridu3668@gmail.com',
+            link: 'mailto:ridu3668@gmail.com?subject=Hello%20Ridu&body=Hi%20Ridu,%0D%0A%0D%0A'
         },
         {
             icon: '📱',
             title: 'Phone',
-            value: '+91 [Your Phone Number]',
-            link: 'tel:+91[your-phone]'
+            value: '+91 8139008554',
+            link: 'tel:+918139008554'
         },
         {
             icon: '📍',
             title: 'Location',
-            value: 'Kerala, India',
+            value: 'Kozhikode, Kerala',
             link: '#'
         }
     ];
 
     const socialLinks = [
-        { name: 'GitHub', icon: '🐱', url: '[Your GitHub URL]' },
+        // { name: 'GitHub', icon: '🐱', url: '[Your GitHub URL]' },
         { name: 'LinkedIn', icon: '💼', url: '[Your LinkedIn Profile URL]' },
         { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' },
         { name: 'Instagram', icon: '📷', url: 'https://instagram.com' }
