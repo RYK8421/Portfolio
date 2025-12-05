@@ -25,21 +25,22 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            // EmailJS configuration
-            const serviceId = 'YOUR_SERVICE_ID';
-            const templateId = 'YOUR_TEMPLATE_ID';
-            const publicKey = 'YOUR_PUBLIC_KEY';
+            // Initialize EmailJS with your public key
+            emailjs.init('Cv8lGhJqmmliYfBH5'); // Replace with your Public Key from Account settings
 
-            const templateParams = {
-                from_name: formData.name,
-                from_email: formData.email,
-                subject: formData.subject,
-                message: formData.message,
-                to_email: 'ridu3668@gmail.com'
-            };
+            // Send email using EmailJS
+            await emailjs.send(
+                'service_z7tihuh',
+                'template_xvux4dr',
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_email: 'ridu3668@gmail.com'
+                }
+            );
 
-            await emailjs.send(serviceId, templateId, templateParams, publicKey);
-            
             alert('Message sent successfully! I will get back to you soon.');
             setFormData({ name: '', email: '', subject: '', message: '' });
         } catch (error) {
