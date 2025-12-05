@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import '../style/Contact.css';
 
 const Contact = () => {
@@ -23,11 +24,30 @@ const Contact = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        setTimeout(() => {
-            setIsSubmitting(false);
-            alert('Message sent successfully!');
+        try {
+            // EmailJS configuration
+            const serviceId = 'YOUR_SERVICE_ID';
+            const templateId = 'YOUR_TEMPLATE_ID';
+            const publicKey = 'YOUR_PUBLIC_KEY';
+
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                to_email: 'ridu3668@gmail.com'
+            };
+
+            await emailjs.send(serviceId, templateId, templateParams, publicKey);
+            
+            alert('Message sent successfully! I will get back to you soon.');
             setFormData({ name: '', email: '', subject: '', message: '' });
-        }, 2000);
+        } catch (error) {
+            console.error('Failed to send email:', error);
+            alert('Failed to send message. Please try emailing me directly at ridu3668@gmail.com');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const contactInfo = [
