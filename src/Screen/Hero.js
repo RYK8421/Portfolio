@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../style/Hero.css';
-import { downloadCV, downloadCVAsHTML } from '../utils/cvGenerator';
+import { downloadCVAsPDF } from '../utils/cvGenerator';
 
 
 const Hero = () => {
@@ -44,19 +44,20 @@ const Hero = () => {
                     </motion.h1>
 
                     <motion.h2 variants={textVariants} className="hero-subtitle">
-                        Frontend Developer (React.js & React Native)
+                        Frontend Developer (React Native, React.js & Electron)
                     </motion.h2>
 
                     <motion.p variants={textVariants} className="hero-description">
-                        Building seamless cross-platform mobile applications with React Native and Expo.
-                        2 years of experience creating efficient, user-friendly solutions with modern technologies.
+                        Building seamless cross-platform applications - mobile apps with React Native, 
+                        web apps with React.js, and desktop apps with Electron. 1.5+ years of experience 
+                        creating efficient, user-friendly solutions across all platforms.
                     </motion.p>
 
                     <motion.div variants={textVariants} className="hero-buttons">
                         <button className="btn btn-primary glowing-border" onClick={handleViewWork}>
                             View My Work 
                         </button>
-                        <button className="btn btn-secondary" onClick={downloadCVAsHTML}>
+                        <button className="btn btn-secondary" onClick={downloadCVAsPDF}>
                             Download CV
                         </button>
                     </motion.div>

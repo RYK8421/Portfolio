@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import '../style/About.css';
-import { downloadCV, downloadCVAsHTML } from '../utils/cvGenerator';
 
 function About() {
     const containerVariants = {
@@ -26,7 +25,7 @@ function About() {
     };
 
     const stats = [
-        { number: '2+', label: 'Years Experience' },
+        { number: '1.5+', label: 'Years Experience' },
         { number: '500+', label: 'Active Users' },
         { number: '50+', label: 'API Endpoints' },
         { number: '15+', label: 'Custom Components' }
@@ -58,7 +57,7 @@ function About() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.2, delay: 0.2 }}
                         >
-                            Frontend Developer & Mobile App Specialist
+                            Frontend Developer & Cross-Platform Specialist
                         </motion.h3>
 
                         <motion.p
@@ -68,9 +67,9 @@ function About() {
                             transition={{ duration: 0.2, delay: 0.1 }}
                         >
                             Hello! I'm <span className="highlight">Ridu Krishna</span>, a passionate Frontend Developer
-                            with 2 years of professional experience specializing in React.js and React Native Expo.
-                            I excel at building cross-platform mobile applications with seamless user experiences,
-                            implementing efficient state management solutions, and integrating robust RESTful APIs.
+                            with 1.5+ years of professional experience specializing in React.js, React Native Expo, and Electron.
+                            I excel at building cross-platform applications - from mobile apps to desktop solutions - with 
+                            seamless user experiences, implementing efficient state management, and integrating robust RESTful APIs.
                         </motion.p>
 
                         <motion.p
@@ -80,9 +79,11 @@ function About() {
                             transition={{ duration: 0.2, delay: 0.1 }}
                         >
                             Currently developing the HR Connect mobile application serving 500+ employees with real-time
-                            task management, push notifications, and interactive engagement features. When I'm not coding,
-                            you'll find me playing competitive football, volunteering with children on the autism spectrum,
-                            or exploring new technologies to stay ahead in this ever-evolving tech landscape.
+                            task management, push notifications, and interactive engagement features. I've also built an 
+                            enterprise chat desktop application using React Electron with WhatsApp-like features for company 
+                            internal communication. When I'm not coding, you'll find me playing competitive football, 
+                            volunteering with children on the autism spectrum, or exploring new technologies to stay ahead 
+                            in this ever-evolving tech landscape.
                         </motion.p>
 
                         <motion.div
@@ -140,6 +141,12 @@ function About() {
                                     <span>Firebase</span>
                                 </div>
                             </div>
+                            <div className="floating-card card-4">
+                                <div className="card-content">
+                                    <span className="card-icon">⚡</span>
+                                    <span>Electron</span>
+                                </div>
+                            </div>
                             <div className="main-visual">
                                 <div className="code-window">
                                     <div className="window-header">
@@ -155,9 +162,10 @@ function About() {
   name: "Ridu Krishna",
   role: "Frontend Developer",
   location: "Kerala, India",
-  specialization: "React.js & React Native",
-  skills: ["React Native", "Expo", "Firebase"],
-  motto: "Building seamless mobile experiences"
+  specialization: "Cross-Platform Development",
+  skills: ["React Native", "React.js", "Electron", "Firebase"],
+  platforms: ["Mobile", "Web", "Desktop"],
+  motto: "Building seamless experiences across all platforms"
 };`}</pre>
                                     </div>
                                 </div>

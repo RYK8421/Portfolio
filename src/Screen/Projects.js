@@ -71,12 +71,57 @@ function Projects() {
             liveUrl: "#",
             githubUrl: "#",
             featured: false
+        },
+        {
+            id: 7,
+            title: "Real-Time Chat System",
+            description: "Full-featured real-time messaging system with one-on-one and group chats, typing indicators, read receipts, message status, online presence, and media sharing capabilities.",
+            image: "💬",
+            tech: ["Socket.io", "React Native", "Firebase", "Real-Time DB"],
+            category: "mobile",
+            liveUrl: "#",
+            githubUrl: "#",
+            featured: true
+        },
+        {
+            id: 8,
+            title: "Social Post Creation System",
+            description: "Feature-rich social posting platform where users can create posts with title, description, photos, mentions, location tags, and links. Interactive engagement with emoji reactions (like, love, laugh, etc.) and threaded comments for community interaction.",
+            image: "📝",
+            tech: ["React Native", "Geolocation", "Image Picker"],
+            category: "mobile",
+            liveUrl: "#",
+            githubUrl: "#",
+            featured: true
+        },
+        {
+            id: 9,
+            title: "Push Notification System",
+            description: "Comprehensive push notification system with Firebase Cloud Messaging (FCM), scheduled notifications, notification channels, deep linking, and custom notification actions for enhanced user engagement.",
+            image: "🔔",
+            tech: ["Firebase FCM", "React Native", "Background Tasks", "Deep Linking"],
+            category: "mobile",
+            liveUrl: "#",
+            githubUrl: "#",
+            featured: true
+        },
+        {
+            id: 10,
+            title: "Blaze HR Desktop Application",
+            description: "Cross-platform desktop chat application built with Electron for company internal communication. Features real-time messaging with Firebase, QR code authentication with Google OAuth, and hybrid storage architecture that reduces Firebase costs by auto-syncing to database.",
+            image: "💻",
+            tech: ["Electron", "Firebase", "JavaScript", "Google OAuth"],
+            category: "desktop",
+            liveUrl: "#",
+            githubUrl: "#",
+            featured: true
         }
     ];
 
     const categories = [
         { id: 'all', name: 'All Projects' },
         { id: 'mobile', name: 'Mobile Apps' },
+        { id: 'desktop', name: 'Desktop Apps' },
         { id: 'fullstack', name: 'Full Stack' },
         { id: 'backend', name: 'Backend' }
     ];
@@ -126,7 +171,27 @@ function Projects() {
                 Here are some of my recent works that showcase my skills and passion for development
             </motion.p>
 
-            <div className="container">             
+            <div className="container">
+                {/* Filter Buttons */}
+                <motion.div
+                    className="filter-buttons"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                    {categories.map((category) => (
+                        <motion.button
+                            key={category.id}
+                            className={`filter-btn ${filter === category.id ? 'active' : ''}`}
+                            onClick={() => setFilter(category.id)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            {category.name}
+                        </motion.button>
+                    ))}
+                </motion.div>
+                
                 {/* Projects Grid */}
                 <motion.div
                     className="projects-grid"

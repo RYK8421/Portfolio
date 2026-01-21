@@ -25,13 +25,18 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            // Initialize EmailJS with your public key
-            emailjs.init('Cv8lGhJqmmliYfBH5'); // Replace with your Public Key from Account settings
+            // EmailJS configuration - hardcoded for GitHub Pages
+            const publicKey = 'Cv8lGhJqmmliYfBH5';
+            const serviceId = 'service_z7tihuh';
+            const templateId = 'template_xvux4dr';
+            
+            // Initialize EmailJS
+            emailjs.init(publicKey);
 
             // Send email using EmailJS
-            await emailjs.send(
-                'service_z7tihuh',
-                'template_xvux4dr',
+            const result = await emailjs.send(
+                serviceId,
+                templateId,
                 {
                     from_name: formData.name,
                     from_email: formData.email,
@@ -41,10 +46,12 @@ const Contact = () => {
                 }
             );
 
+            console.log('Email sent successfully:', result);
             alert('Message sent successfully! I will get back to you soon.');
             setFormData({ name: '', email: '', subject: '', message: '' });
         } catch (error) {
             console.error('Failed to send email:', error);
+            console.error('Error details:', error.text || error.message || error);
             alert('Failed to send message. Please try emailing me directly at ridu3668@gmail.com');
         } finally {
             setIsSubmitting(false);
@@ -73,8 +80,8 @@ const Contact = () => {
     ];
 
     const socialLinks = [
-        // { name: 'GitHub', icon: '🐱', url: '[Your GitHub URL]' },
-        { name: 'LinkedIn', icon: '💼', url: '[Your LinkedIn Profile URL]' },
+        { name: 'GitHub', icon: '🐱', url: 'https://github.com/RYK8421' },
+        { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/ridu-krishna-5110791b5' },
         { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' },
         { name: 'Instagram', icon: '📷', url: 'https://instagram.com' }
     ];

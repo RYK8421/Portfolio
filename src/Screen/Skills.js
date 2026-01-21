@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../style/Skills.css';
 
@@ -25,6 +25,13 @@ const Skills = () => {
             color: '#61dafb',
             icon: '⚛️',
             category: 'Frontend'
+        },
+        {
+            name: 'Electron',
+            level: 85,
+            color: '#47848f',
+            icon: '⚡',
+            category: 'Desktop'
         },
         {
             name: 'JavaScript ES6+',
@@ -76,6 +83,27 @@ const Skills = () => {
             category: 'State Management'
         },
         {
+            name: 'Real-Time Chat',
+            level: 88,
+            color: '#25d366',
+            icon: '💬',
+            category: 'Real-Time'
+        },
+        {
+            name: 'Push Notifications',
+            level: 88,
+            color: '#ff6b6b',
+            icon: '🔔',
+            category: 'Real-Time'
+        },
+        {
+            name: 'WebSocket/Socket.io',
+            level: 85,
+            color: '#010101',
+            icon: '⚡',
+            category: 'Real-Time'
+        },
+        {
             name: 'Git/GitHub',
             level: 88,
             color: '#f05032',
@@ -92,11 +120,13 @@ const Skills = () => {
     ];
 
     const categories = [
-        { name: 'All', icon: '🌟', count: 12 },
+        { name: 'All', icon: '🌟', count: 16 },
         { name: 'Mobile', icon: '📱', count: 2 },
         { name: 'Frontend', icon: '💻', count: 3 },
+        { name: 'Desktop', icon: '🖥️', count: 1 },
         { name: 'Backend', icon: '🔧', count: 3 },
         { name: 'State Management', icon: '🔄', count: 2 },
+        { name: 'Real-Time', icon: '⚡', count: 3 },
         { name: 'Tools', icon: '🛠️', count: 2 }
     ];
 
@@ -272,7 +302,10 @@ const Skills = () => {
                             'React DevTools', 'Chrome DevTools', 'ESLint', 'Prettier',
                             'VS Code', 'npm', 'yarn', 'GitLab', 'Patch Package',
                             'Custom Hooks', 'Component Architecture', 'Responsive Design',
-                            'Code Splitting', 'Lazy Loading', 'Error Handling'
+                            'Code Splitting', 'Lazy Loading', 'Error Handling',
+                            'Real-Time Messaging', 'Socket.io', 'WebSockets', 'FCM Push',
+                            'Image Upload', 'Media Handling', 'Live Updates', 'Chat UI',
+                            'Electron IPC', 'Desktop Apps', 'Cross-Platform'
                         ].map((tag, index) => (
                             <motion.span
                                 key={tag}

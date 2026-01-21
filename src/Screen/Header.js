@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../style/Header.css';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,8 +15,6 @@ const Header = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -34,6 +34,7 @@ const Header = () => {
                             {item}
                         </a>
                     ))}
+                
                 </nav>
 
                 <button
