@@ -78,7 +78,7 @@ function About() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.2, delay: 0.1 }}
                         >
-                            Currently developing the HR Connect mobile application serving 500+ employees with real-time
+                            Currently developing the HR Connect mobile application serving 50+ employees with real-time
                             task management, push notifications, and interactive engagement features. I've also built an 
                             enterprise chat desktop application using React Electron with WhatsApp-like features for company 
                             internal communication. When I'm not coding, you'll find me playing competitive football, 

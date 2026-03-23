@@ -152,7 +152,7 @@ const Contact = () => {
                         ))}
                     </div>
 
-                    <div className="social-links">
+                    {/* <div className="social-links">
                         <h4>Follow Me</h4>
                         <div className="social-icons">
                             {socialLinks.map((social) => (
@@ -170,7 +170,7 @@ const Contact = () => {
                                 </motion.a>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                 </motion.div>
 
                 <motion.div className="contact-form-container" variants={itemVariants}>

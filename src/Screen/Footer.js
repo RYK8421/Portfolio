@@ -23,8 +23,8 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { name: 'GitHub', icon: '💻', url: 'https://github.com/RYK8421' },
-        { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/ridu-krishna-5110791b5' },
+        // { name: 'GitHub', icon: '💻', url: 'https://github.com/RYK8421' },
+        { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/ridu-krishna-c-511079185/' },
         { name: 'Email', icon: '📧', url: 'mailto:ridu3668@gmail.com' },
         { name: 'Phone', icon: '📱', url: 'tel:+918139008554' }
     ];
@@ -74,9 +74,9 @@ const Footer = () => {
                         </p>
 
                         <div className="footer-extra">
-                            <a href="https://github.com/RYK8421" className="extra-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <span className="divider">|</span>
-                            <a href="https://www.linkedin.com/in/ridu-krishna-5110791b5" className="extra-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            {/* <a href="https://github.com/RYK8421" className="extra-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <span className="divider">|</span> */}
+                            <a href="https://www.linkedin.com/in/ridu-krishna-c-511079185/" className="extra-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                             <span className="divider">|</span>
                             <a href="mailto:ridu3668@gmail.com" className="extra-link">Email</a>
                         </div>

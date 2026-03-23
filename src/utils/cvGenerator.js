@@ -4,92 +4,96 @@ import jsPDF from 'jspdf';
 export const generateATSFriendlyCV = () => {
   const cvData = {
     name: "Ridu Krishna C",
-    title: "Frontend Developer | React.js • React Native • Electron",
+    title: "Frontend Developer (React.js | React Native | Electron)",
+    openTo: "Open to Frontend Developer | React Developer | React Native roles",
     contact: {
       email: "ridu3668@gmail.com",
       phone: "+91 8139008554",
       location: "Kozhikode, Kerala 673012",
-      linkedin: "https://www.linkedin.com/in/ridu-krishna-5110791b5",
-      github: "github.com/ridukrishna"
+      linkedin: "https://www.linkedin.com/in/ridu-krishna-c-511079185/",
+      github: "https://github.com/ridukrishna"
     },
-    summary: "Results-driven Frontend Developer with 1.5+ years of hands-on experience specializing in React Native, React.js, and Electron development. Proven expertise in building scalable cross-platform applications (mobile, web, and desktop) serving 500+ active users. Skilled in implementing real-time features, state management, RESTful API integration, and creating intuitive user interfaces across all platforms. Strong foundation in Computer Science with demonstrated ability to deliver high-quality solutions in fast-paced environments.",
+    summary: "Frontend Developer with 1.5+ years of experience building scalable applications across web, mobile, and desktop using React.js, React Native, and Electron. I enjoy creating responsive, user-friendly interfaces and have hands-on experience working with REST APIs, real-time features, and performance optimization. I’m comfortable working with JavaScript and TypeScript, using modern React practices like Hooks and state management (Context API/Redux). I also have a basic understanding of backend technologies such as Node.js and Django, and I’m experienced with Git workflows, debugging, and collaborating in Agile teams.",
     
     experience: [
       {
-        title: "React Native Developer",
+        title: "React Native Developer (Expo)",
         company: "Impetors",
         period: "2024 - Present",
+        environment: "Agile/Scrum methodology with Git-based version control",
         achievements: [
-          "Architected and developed HR Connect enterprise mobile application serving 100+ employees with comprehensive HR management features including task tracking, attendance marking, and leave management system.",
-          "Engineered real-time chat functionality with advanced features: typing indicators, read receipts, online presence tracking, and multimedia sharing capabilities.",
-          "Designed and implemented social engagement platform with post creation, photo uploads, user mentions, location tagging, and interactive emoji reactions.",
-          "Integrated push notification system via RESTful API for instant updates, improving user engagement by 45%.",
-          "Successfully integrated 50+ RESTful API endpoints with robust error handling and data validation.",
-          "Developed reusable component library with 15+ custom components, accelerating development speed by 40%.",
-          "Optimized application performance and real-time task tracking, reducing task completion time by 30%."
+          "Architected and developed HR Connect mobile application using React Native and Expo (SPA architecture), serving 100+ active users with 99% uptime",
+          "Built cross-platform mobile solutions using React Native and Expo, delivering comprehensive HR management functionalities",
+          "Developed real-time chat system with typing indicators, read receipts, and online presence tracking",
+          "Implemented multimedia sharing and social engagement features with emoji reactions and threaded comments",
+          "Integrated push notification system via RESTful APIs, improving user engagement by 45%",
+          "Integrated 50+ RESTful API endpoints with JWT authentication, error handling, and data validation",
+          "Built reusable UI components library with 15+ custom React Native components, accelerating development by 40%",
+          "Optimized application performance using React Native tools, reducing task completion time by 30%",
+          "Implemented state management using Context API and Redux-ready architecture for scalable frontend applications"
         ]
       }
     ],
     
     skills: {
-      frontend: ["React Native", "React.js", "Electron", "Expo SDK", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Framer Motion"],
-      mobile: ["React Native Development", "Expo CLI", "Mobile App Development", "Cross-platform Development", "Desktop App Development", "Electron IPC"],
-      stateManagement: ["Context API", "React Hooks", "Redux (Basic)", "State Management Patterns"],
-      backend: ["RESTful API Integration", "Firebase", "Firestore", "Node.js (Basic)", "Python Django", "API Authentication"],
-      tools: ["Git", "GitHub", "GitLab", "VS Code", "npm/yarn", "Postman", "Vercel", "EAS Build", "Android Studio"],
-      other: ["Push Notifications", "Responsive Design", "Real-Time Systems", "Performance Optimization", "Debugging"]
+      frontend: ["React.js", "React Native", "Expo SDK", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Responsive Web Design", "Single Page Applications (SPA)"],
+      stateManagement: ["Context API", "Redux", "Component-Based Architecture"],
+      mobile: ["React Native Development", "Expo CLI", "React Navigation", "Async Storage", "Mobile UI/UX"],
+      backend: ["RESTful APIs", "Firebase", "Firestore", "Node.js", "Python Django", "SQLite", "JWT Authentication"],
+      tools: ["Git", "GitHub", "GitLab", "VS Code", "npm", "yarn", "Postman", "Vercel", "EAS Build", "Android Studio", "Xcode", "Jira"],
+      concepts: ["Agile/Scrum", "Push Notifications", "Real-Time Systems", "Performance Optimization", "Lazy Loading", "Code Splitting", "Unit Testing (Jest)", "Web Performance", "Debugging", "Code Review", "CI/CD"]
     },
     
     projects: [ 
       {
-        name: "Blaze HR Connect - Enterprise Mobile Application",
-        description: "Comprehensive HR management mobile application built with React Native Expo, serving 100+ employees with real-time communication, attendance tracking, and leave management capabilities.",
+        name: "Blaze HR Connect – Enterprise Mobile Application (React Native and Expo)",
+        description: "HR management mobile application serving 100+ active employees with real-time communication, attendance tracking, and leave management.",
         technologies: ["React Native", "Expo SDK", "Firebase", "Firestore", "Context API", "RESTful APIs"],
         highlights: [
-          "Architected scalable mobile application serving 100+ active employees with features including task management, attendance marking, leave management, and document handling (PDF, Images, Documents).",
-          "Implemented real-time chat system with one-on-one and group messaging, typing indicators, read receipts, online presence tracking, and multimedia sharing.",
-          "Developed social engagement platform enabling users to create posts with rich content (photos, mentions, location tags, links) and interactive features.",
-          "Built interactive engagement system with emoji reactions (like, love, laugh, etc.) and threaded comment functionality.",
-          "Created employee engagement features including real-time polls with live voting results and automated birthday tracking with reminder notifications.",
-          "Integrated push notification system via RESTful API for instant updates and deep linking capabilities.",
-          "Implemented efficient state management using Context API with optimized performance and minimal re-renders."
+          "Built scalable mobile solution serving 100+ active employees with task management, attendance, and leave features",
+          "Developed real-time chat system with one-on-one and group messaging, typing indicators, and read receipts",
+          "Implemented social engagement platform with post creation, photo uploads, mentions, and emoji reactions",
+          "Created employee engagement features including real-time polls and automated birthday notifications",
+          "Integrated push notification system via RESTful APIs, improving user engagement by 45%",
+          "Implemented efficient state management using Context API with optimized performance"
+        ]
+      },
+
+      {
+        name: "Blaze HR Desktop Application (React Electron)",
+        description: "Cross-platform desktop chat application built with Electron for company internal communication with real-time messaging and QR code authentication.",
+        technologies: ["Electron", "JavaScript (ES6+)", "Firebase", "Vite", "Axios", "REST APIs"],
+        highlights: [
+          "Developed cross-platform desktop chat application using Electron framework, supporting real-time communication for internal teams and improving collaboration efficiency by 25%",
+          "Implemented real-time messaging system with Firebase and custom API integration",
+          "Created hybrid storage architecture reducing Firebase costs through auto-sync to database",
+          "Built QR code authentication system with Google OAuth integration",
+          "Designed responsive UI with real-time updates, typing indicators, and unread badges",
+          "Packaged and distributed application for Windows, macOS, and Linux platforms"
         ]
       },
       {
-        name: "Blaze HR Desktop Application",
-        description: "Cross-platform desktop chat application built with Electron framework for company internal communication, featuring real-time messaging, QR code authentication, and hybrid storage architecture.",
-        technologies: ["Electron, JavaScript (ES6+), Firebase, Vite, Axios, QR Code APIs, REST APIs"],
+        name: "Personal Portfolio Website (React)",
+        description: "Modern, responsive portfolio website showcasing projects and skills with interactive animations and ATS-friendly CV generator.",
+        technologies: ["React.js", "Framer Motion", "EmailJS", "CSS3", "Vercel", "jsPDF"],
         highlights: [
-          "Developed cross-platform desktop chat application using Electron framework.",
-          "Implemented real-time messaging system with Firebase and custom API integration.",
-          "Created hybrid storage architecture reducing Firebase costs by auto-syncing to database.",
-          "Built QR code authentication system with Google OAuth integration.",
-          "Designed responsive UI with real-time updates, typing indicators, and unread badges.",
-          "Packaged and distributed application for Windows, macOS, and Linux platforms."
-        ]
-      },
-      {
-        name: "Personal Portfolio Website",
-        description: "Modern, responsive portfolio website showcasing projects and skills with interactive animations and seamless user experience.",
-        technologies: ["React.js", "Framer Motion", "EmailJS", "CSS3", "Vercel", "Responsive Design"],
-        highlights: [
-          "Designed and developed fully responsive portfolio website with smooth animations using Framer Motion library.",
-          "Integrated EmailJS for functional contact form enabling direct client communication.",
-          "Implemented ATS-friendly CV generator with downloadable PDF format.",
-          "Optimized for all devices with mobile-first responsive design approach.",
-          "Deployed on Vercel with automated CI/CD pipeline for seamless updates." 
+          "Designed and developed fully responsive portfolio using React.js (SPA), improving user engagement and recruiter interaction",
+          "Integrated EmailJS for functional contact form enabling direct client communication",
+          "Implemented ATS-friendly CV generator with downloadable PDF and text formats",
+          "Optimized for all devices with mobile-first responsive design approach",
+          "Deployed on Vercel with automated CI/CD pipeline for seamless updates"
         ]
       },
       {
         name: "E-Commerce Platform (Academic Project)",
-        description: "Full-stack e-commerce web application with complete shopping functionality, built as a college project demonstrating end-to-end development skills.",
+        description: "Full-stack e-commerce web application with complete shopping functionality demonstrating end-to-end development skills.",
         technologies: ["Python Django", "SQLite", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
         highlights: [
-          "Developed secure user authentication and authorization system with role-based access control.",
-          "Built dynamic product catalog with advanced search, filtering, and sorting capabilities.",
-          "Implemented shopping cart functionality with session management and checkout process.",
-          "Created admin panel for order management and inventory tracking.",
-          "Designed using Django MVC architecture following best practices and design patterns."
+          "Developed secure user authentication and authorization system with role-based access control",
+          "Built dynamic product catalog with advanced search, filtering, and sorting capabilities",
+          "Implemented shopping cart functionality with session management and checkout process",
+          "Created admin panel for order management and inventory tracking",
+          "Designed using Django MVC architecture following best practices and design patterns"
         ]
       }
     ],
@@ -111,13 +115,13 @@ export const generateATSFriendlyCV = () => {
     ],
     
     
-    hobbies: [
-      "Football",
-      "Chess",
-      "Gaming",
-      "Listening to music",
-      "Providing assistance to children with autism spectrum disorder"
-    ],
+    // hobbies: [
+    //   "Football",
+    //   "Chess",
+    //   "Gaming",
+    //   "Listening to music",
+    //   "Providing assistance to children with autism spectrum disorder"
+    // ],
     
     languages: ["English", "Hindi", "Malayalam"]
   };
@@ -131,6 +135,7 @@ export const generatePlainTextCV = () => {
   
   let plainText = `${cv.name.toUpperCase()}\n`;
   plainText += `${cv.title}\n`;
+  if (cv.openTo) plainText += `${cv.openTo}\n`;
   plainText += `${'='.repeat(60)}\n\n`;
   
   plainText += `CONTACT INFORMATION\n`;
@@ -138,7 +143,7 @@ export const generatePlainTextCV = () => {
   plainText += `Phone: ${cv.contact.phone}\n`;
   plainText += `Location: ${cv.contact.location}\n`;
   plainText += `LinkedIn: ${cv.contact.linkedin}\n`;
-  // plainText += `GitHub: ${cv.contact.github}\n\n`;
+  plainText += `GitHub: ${cv.contact.github}\n\n`;
   
   plainText += `PROFESSIONAL SUMMARY\n`;
   plainText += `${cv.summary}\n\n`;
@@ -147,6 +152,7 @@ export const generatePlainTextCV = () => {
   cv.experience.forEach(exp => {
     plainText += `\n${exp.title} | ${exp.company}\n`;
     plainText += `${exp.period}\n`;
+    if (exp.environment) plainText += `Environment: ${exp.environment}\n`;
     exp.achievements.forEach(achievement => {
       plainText += `- ${achievement}\n`;
     });
@@ -154,10 +160,11 @@ export const generatePlainTextCV = () => {
   
   plainText += `\nTECHNICAL SKILLS\n`;
   plainText += `Frontend: ${cv.skills.frontend.join(', ')}\n`;
+  plainText += `State Management: ${cv.skills.stateManagement.join(', ')}\n`;
   plainText += `Mobile Development: ${cv.skills.mobile.join(', ')}\n`;
   plainText += `Backend & APIs: ${cv.skills.backend.join(', ')}\n`;
   plainText += `Tools: ${cv.skills.tools.join(', ')}\n`;
-  plainText += `Other: ${cv.skills.other.join(', ')}\n`;
+  plainText += `Concepts: ${cv.skills.concepts.join(', ')}\n`;
   
   plainText += `\nKEY PROJECTS\n`;
   cv.projects.forEach(project => {
@@ -263,6 +270,14 @@ export const downloadCVAsPDF = () => {
   doc.text(cv.title, margin, yPos);
   yPos += 5;
   
+  if (cv.openTo) {
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(0, 102, 51);
+    doc.text(cv.openTo, margin, yPos);
+    yPos += 5;
+  }
+  
   // Contact Information
   doc.setFontSize(9);
   doc.setTextColor(60, 60, 60);
@@ -280,7 +295,7 @@ export const downloadCVAsPDF = () => {
   doc.line(margin, yPos, pageWidth - margin, yPos);
   yPos += 7;
   
-  // Professional Summary
+  // Professional Profile
   doc.setFontSize(12);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(0, 51, 102);
@@ -326,6 +341,13 @@ export const downloadCVAsPDF = () => {
     doc.text(exp.period, margin, yPos);
     yPos += 5;
     
+    if (exp.environment) {
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(60, 60, 60);
+      doc.text(`Environment: ${exp.environment}`, margin, yPos);
+      yPos += 5;
+    }
+    
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
     exp.achievements.forEach(achievement => {
@@ -360,10 +382,11 @@ export const downloadCVAsPDF = () => {
   
   const skillCategories = [
     { label: 'Frontend', skills: cv.skills.frontend },
+    { label: 'State Management', skills: cv.skills.stateManagement },
     { label: 'Mobile Development', skills: cv.skills.mobile },
     { label: 'Backend & APIs', skills: cv.skills.backend },
     { label: 'Tools', skills: cv.skills.tools },
-    { label: 'Other', skills: cv.skills.other }
+    { label: 'Concepts', skills: cv.skills.concepts }
   ];
   
   skillCategories.forEach(category => {
@@ -561,21 +584,23 @@ export const downloadCVAsHTML = () => {
 <body>
     <h1>${cv.name}</h1>
     <p class="title"><strong>${cv.title}</strong></p>
+    ${cv.openTo ? `<p style="color: #006633; font-style: italic;"><strong>${cv.openTo}</strong></p>` : ''}
     <div class="contact">
         <p>Email: ${cv.contact.email}</p>
         <p>Phone: ${cv.contact.phone}</p>
         <p>Location: ${cv.contact.location}</p>
         <p>LinkedIn: ${cv.contact.linkedin}</p>
-        // <p>GitHub: ${cv.contact.github}</p>
+        <p>GitHub: ${cv.contact.github}</p>
     </div>
     
-    <h2>Professional Summary</h2>
+    <h2>PROFESSIONAL SUMMARY</h2>
     <p>${cv.summary}</p>
     
     <h2>Professional Experience</h2>
     ${cv.experience.map(exp => `
         <h3>${exp.title} | ${exp.company}</h3>
         <p><em>${exp.period}</em></p>
+        ${exp.environment ? `<p><strong>Environment:</strong> ${exp.environment}</p>` : ''}
         <ul>
             ${exp.achievements.map(achievement => `<li>${achievement}</li>`).join('')}
         </ul>
@@ -583,10 +608,11 @@ export const downloadCVAsHTML = () => {
     
     <h2>Technical Skills</h2>
     <div class="skill-category"><strong>Frontend:</strong> ${cv.skills.frontend.join(', ')}</div>
+    <div class="skill-category"><strong>State Management:</strong> ${cv.skills.stateManagement.join(', ')}</div>
     <div class="skill-category"><strong>Mobile Development:</strong> ${cv.skills.mobile.join(', ')}</div>
     <div class="skill-category"><strong>Backend & APIs:</strong> ${cv.skills.backend.join(', ')}</div>
     <div class="skill-category"><strong>Tools:</strong> ${cv.skills.tools.join(', ')}</div>
-    <div class="skill-category"><strong>Other:</strong> ${cv.skills.other.join(', ')}</div>
+    <div class="skill-category"><strong>Concepts:</strong> ${cv.skills.concepts.join(', ')}</div>
     
     <h2>Key Projects</h2>
     ${cv.projects.map(project => `

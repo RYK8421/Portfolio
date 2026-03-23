@@ -173,26 +173,26 @@
 }
 
 .card-1 {
-  top: 10%;
-  left: 5%;
+  top: 0%;
+  left: 8%;
   animation: float 6s ease-in-out infinite;
 }
 
 .card-2 {
-  top: 60%;
-  left: 0%;
+  bottom: 0%;
+  left: 8%;
   animation: float 8s ease-in-out infinite reverse;
 }
 
 .card-3 {
-  top: 10%;
-  right: 5%;
+  top: 0%;
+  right: 10%;
   animation: float 7s ease-in-out infinite;
 }
 
 .card-4 {
-  top: 60%;
-  right: 0%;
+  bottom: 0%;
+  right: 10%;
   animation: float 9s ease-in-out infinite;
 }
 

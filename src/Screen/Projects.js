@@ -41,14 +41,14 @@ function Projects() {
         },
         {
             id: 4,
-            title: "E-Commerce Platform",
-            description: "Full-stack e-commerce website with user authentication, product catalog, search and filtering, shopping cart, checkout process, and order management. Built with Django MVC architecture.",
-            image: "🛒",
-            tech: ["Python Django", "SQLite", "HTML", "CSS", "JavaScript"],
-            category: "fullstack",
+            title: "Portfolio Website",
+            description: "Modern and responsive portfolio website showcasing projects, skills, and experience. Features smooth animations with Framer Motion, interactive UI components, contact form with email integration, and CV download functionality.",
+            image: "🌐",
+            tech: ["React.js", "Framer Motion", "CSS3", "Vercel"],
+            category: "website",
             liveUrl: "#",
             githubUrl: "#",
-            featured: false
+            featured: true
         },
         {
             id: 5,
@@ -67,7 +67,7 @@ function Projects() {
             description: "Robust API integration layer handling 50+ endpoints with proper error handling, loading states, and retry logic. Implemented efficient data fetching and caching strategies.",
             image: "🔗",
             tech: ["Axios", "REST API", "Error Handling", "Async/Await"],
-            category: "backend",
+            category: "mobile",
             liveUrl: "#",
             githubUrl: "#",
             featured: false
@@ -119,11 +119,10 @@ function Projects() {
     ];
 
     const categories = [
-        { id: 'all', name: 'All Projects' },
-        { id: 'mobile', name: 'Mobile Apps' },
-        { id: 'desktop', name: 'Desktop Apps' },
-        { id: 'fullstack', name: 'Full Stack' },
-        { id: 'backend', name: 'Backend' }
+        { id: 'all', name: 'All' },
+        { id: 'mobile', name: 'Mobile' },
+        { id: 'website', name: 'Website' },
+        { id: 'desktop', name: 'Desktop' }
     ];
 
     const filteredProjects = filter === 'all'
@@ -171,40 +170,40 @@ function Projects() {
                 Here are some of my recent works that showcase my skills and passion for development
             </motion.p>
 
+            <motion.div
+                className="filter-buttons"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+            >
+                {categories.map((category) => (
+                    <motion.button
+                        key={category.id}
+                        className={`filter-btn ${filter === category.id ? 'active' : ''}`}
+                        onClick={() => setFilter(category.id)}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        {category.name}
+                    </motion.button>
+                ))}
+            </motion.div>
+            
             <div className="container">
-                {/* Filter Buttons */}
-                <motion.div
-                    className="filter-buttons"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                    {categories.map((category) => (
-                        <motion.button
-                            key={category.id}
-                            className={`filter-btn ${filter === category.id ? 'active' : ''}`}
-                            onClick={() => setFilter(category.id)}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            {category.name}
-                        </motion.button>
-                    ))}
-                </motion.div>
-                
                 {/* Projects Grid */}
                 <motion.div
                     className="projects-grid"
                     variants={containerVariants}
                     initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
+                    animate="visible"
+                    key={filter}
                 >
                     {filteredProjects.map(project => (
                         <motion.div
                             key={project.id}
                             className={`project-card ${project.featured ? 'featured' : ''}`}
                             variants={itemVariants}
+                            layout
                             whileHover={{
                                 scale: 1.03,
                                 y: -10
@@ -228,25 +227,6 @@ function Projects() {
                                         <span key={index} className="tech-tag">{tech}</span>
                                     ))}
                                 </div>
-{/* 
-                                <div className="project-links">
-                                    <a
-                                        href={project.liveUrl}
-                                        className="project-link live-demo"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    <a
-                                        href={project.githubUrl}
-                                        className="project-link github"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        GitHub
-                                    </a>
-                                </div> */}
                             </div>
 
                             <div className="project-glow"></div>

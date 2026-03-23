@@ -75,13 +75,7 @@ const Skills = () => {
             icon: '🔄',
             category: 'State Management'
         },
-        {
-            name: 'React Hooks',
-            level: 90,
-            color: '#61dafb',
-            icon: '🪝',
-            category: 'State Management'
-        },
+
         {
             name: 'Real-Time Chat',
             level: 88,
@@ -96,13 +90,7 @@ const Skills = () => {
             icon: '🔔',
             category: 'Real-Time'
         },
-        {
-            name: 'WebSocket/Socket.io',
-            level: 85,
-            color: '#010101',
-            icon: '⚡',
-            category: 'Real-Time'
-        },
+
         {
             name: 'Git/GitHub',
             level: 88,
@@ -120,13 +108,13 @@ const Skills = () => {
     ];
 
     const categories = [
-        { name: 'All', icon: '🌟', count: 16 },
+        { name: 'All', icon: '🌟', count: 14 },
         { name: 'Mobile', icon: '📱', count: 2 },
         { name: 'Frontend', icon: '💻', count: 3 },
         { name: 'Desktop', icon: '🖥️', count: 1 },
         { name: 'Backend', icon: '🔧', count: 3 },
-        { name: 'State Management', icon: '🔄', count: 2 },
-        { name: 'Real-Time', icon: '⚡', count: 3 },
+        { name: 'State Management', icon: '🔄', count: 1 },
+        { name: 'Real-Time', icon: '⚡', count: 2 },
         { name: 'Tools', icon: '🛠️', count: 2 }
     ];
 
@@ -301,10 +289,10 @@ const Skills = () => {
                             'Firebase Auth', 'JWT Tokens', 'SQLite', 'Metro Bundler',
                             'React DevTools', 'Chrome DevTools', 'ESLint', 'Prettier',
                             'VS Code', 'npm', 'yarn', 'GitLab', 'Patch Package',
-                            'Custom Hooks', 'Component Architecture', 'Responsive Design',
+                            'Component Architecture', 'Responsive Design',
                             'Code Splitting', 'Lazy Loading', 'Error Handling',
-                            'Real-Time Messaging', 'Socket.io', 'WebSockets', 'FCM Push',
-                            'Image Upload', 'Media Handling', 'Live Updates', 'Chat UI',
+                            'Real-Time Messaging', 'FCM Push', 'Image Upload', 
+                            'Media Handling', 'Live Updates', 'Chat UI',
                             'Electron IPC', 'Desktop Apps', 'Cross-Platform'
                         ].map((tag, index) => (
                             <motion.span
