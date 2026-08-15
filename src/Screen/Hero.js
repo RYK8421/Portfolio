@@ -54,14 +54,14 @@ const Hero = () => {
                         creating efficient, user-friendly solutions across all platforms.
                     </motion.p>
 
-                    <motion.div variants={textVariants} className="hero-buttons">
+                    {/* <motion.div variants={textVariants} className="hero-buttons">
                         <button className="btn btn-primary glowing-border" onClick={handleViewWork}>
                             View My Work 
                         </button>
                         <button className="btn btn-secondary" onClick={downloadCVAsPDF}>
                             Download CV
                         </button>
-                    </motion.div>
+                    </motion.div> */}
                 </motion.div>
 
                 <motion.div
