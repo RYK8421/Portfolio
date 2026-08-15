@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBuilding, FaUsers, FaGlobe, FaLink, FaDesktop } from 'react-icons/fa';
+import { FaBuilding, FaUsers, FaGlobe, FaLink, FaDesktop, FaPaw } from 'react-icons/fa';
 import '../style/Projects.css';
 
 function Projects() {
@@ -18,6 +18,7 @@ function Projects() {
             githubUrl: "#",
             featured: true
         },
+       
         {
             id: 2,
             title: "Blazr HR Mobile App",
@@ -31,6 +32,17 @@ function Projects() {
         },
         {
             id: 3,
+            title: "Petora – Inventory Management System",
+            description: "Full-stack real-time inventory management system supporting both web and mobile platforms. Features product & category management with CRUD operations, role-based authentication for Admin and Staff, real-time data synchronization using Firestore, offline support with AsyncStorage, image compression and optimization, responsive UI, and performance optimization using FlashList and caching. Built with React for web and React Native with Expo for mobile.",
+            icon: <FaPaw />,
+            tech: ["React", "React Native", "Expo", "Firebase", "Firestore", "Context API", "AsyncStorage"],
+            category: "fullstack",
+            liveUrl: "#",
+            githubUrl: "#",
+            featured: true
+        },
+        {
+            id: 4,
             title: "Portfolio Website",
             description: "Modern and responsive portfolio website showcasing projects, skills, and experience. Features smooth animations with Framer Motion, interactive UI components, contact form with email integration, and CV download functionality.",
             icon: <FaGlobe />,
@@ -41,7 +53,7 @@ function Projects() {
             featured: true
         },
         {
-            id: 4,
+            id: 5,
             title: "API Services Layer",
             description: "Robust API integration layer handling 50+ endpoints with proper error handling, loading states, and retry logic. Implemented efficient data fetching and caching strategies.",
             icon: <FaLink />,
@@ -52,7 +64,7 @@ function Projects() {
             featured: false
         },
         {
-            id: 5,
+            id: 6,
             title: "Blaze HR Desktop Application",
             description: "Cross-platform desktop chat application built with Electron for company internal communication. Features real-time messaging with Firebase, QR code authentication with Google OAuth, and hybrid storage architecture that reduces Firebase costs by auto-syncing to database.",
             icon: <FaDesktop />,
@@ -67,6 +79,7 @@ function Projects() {
     const categories = [
         { id: 'all', name: 'All' },
         { id: 'mobile', name: 'Mobile' },
+        { id: 'fullstack', name: 'Full-Stack' },
         { id: 'website', name: 'Website' },
         { id: 'desktop', name: 'Desktop' }
     ];

@@ -27,9 +27,9 @@ function About() {
 
     const stats = [
         { number: '2+', label: 'Years Experience' },
+        { number: '6+', label: 'Projects Completed' },
         { number: '500+', label: 'Active Users' },
-        { number: '50+', label: 'API Endpoints' },
-        { number: '15+', label: 'Custom Components' }
+        { number: '50+', label: 'API Endpoints' }
     ];
 
     return (
@@ -79,12 +79,12 @@ function About() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.2, delay: 0.1 }}
                         >
-                            Currently developing enterprise HR applications including RootHR (production app on iOS/Android stores) 
-                            and Blazr HR mobile application serving 500+ employees with real-time task management, push notifications, 
-                            and interactive engagement features. I've also built an enterprise chat desktop application using React 
-                            Electron with WhatsApp-like features for company internal communication. When I'm not coding, you'll find 
-                            me playing competitive football, volunteering with children on the autism spectrum, or exploring new 
-                            technologies to stay ahead in this ever-evolving tech landscape.
+                            Currently developing enterprise applications including RootHR (production app on iOS/Android stores), 
+                            Blazr HR mobile app serving 500+ employees, and Petora - a full-stack inventory management system 
+                            for web and mobile platforms. I've also built enterprise chat desktop applications using React Electron 
+                            with real-time messaging capabilities. When I'm not coding, you'll find me playing competitive football, 
+                            volunteering with children on the autism spectrum, or exploring new technologies to stay ahead in this 
+                            ever-evolving tech landscape.
                         </motion.p>
 
                         <motion.div
