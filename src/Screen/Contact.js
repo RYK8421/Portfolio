@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import '../style/Contact.css';
 
 const Contact = () => {
@@ -60,19 +61,19 @@ const Contact = () => {
 
     const contactInfo = [
         {
-            icon: '📧',
+            icon: <MdEmail />,
             title: 'Email',
             value: 'ridu3668@gmail.com',
             link: 'mailto:ridu3668@gmail.com?subject=Hello%20Ridu&body=Hi%20Ridu,%0D%0A%0D%0A'
         },
         {
-            icon: '📱',
+            icon: <MdPhone />,
             title: 'Phone',
             value: '+91 8139008554',
             link: 'tel:+918139008554'
         },
         {
-            icon: '📍',
+            icon: <MdLocationOn />,
             title: 'Location',
             value: 'Kozhikode, Kerala',
             link: '#'

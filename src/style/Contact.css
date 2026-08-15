@@ -66,6 +66,14 @@
   justify-content: center;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 50%;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--background-dark);
+  transform: scale(1.1);
 }
 
 .contact-text h4 {

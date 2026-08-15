@@ -1,5 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+    FaReact, FaMobile, FaDesktop, FaPython, 
+    FaGitAlt, FaFire, FaLink, FaComments, FaBell 
+} from 'react-icons/fa';
+import { 
+    SiTypescript, SiJavascript, SiElectron, SiExpo,
+    SiHtml5, SiCss3, SiFirebase
+} from 'react-icons/si';
+import { MdLocationOn, MdSearch, MdSync, MdSettings, MdRocket } from 'react-icons/md';
 import '../style/Skills.css';
 
 const Skills = () => {
@@ -9,113 +18,139 @@ const Skills = () => {
             name: 'React Native',
             level: 92,
             color: '#61dafb',
-            icon: '⚛️',
+            icon: <FaReact />,
             category: 'Mobile'
+        },
+        {
+            name: 'TypeScript',
+            level: 88,
+            color: '#3178c6',
+            icon: <SiTypescript />,
+            category: 'Frontend'
         },
         {
             name: 'Expo SDK',
             level: 90,
             color: '#000020',
-            icon: '📱',
+            icon: <SiExpo />,
             category: 'Mobile'
         },
         {
             name: 'React.js',
             level: 90,
             color: '#61dafb',
-            icon: '⚛️',
+            icon: <FaReact />,
             category: 'Frontend'
         },
         {
             name: 'Electron',
             level: 85,
             color: '#47848f',
-            icon: '⚡',
+            icon: <SiElectron />,
             category: 'Desktop'
         },
         {
             name: 'JavaScript ES6+',
             level: 90,
             color: '#f7df1e',
-            icon: '⚡',
+            icon: <SiJavascript />,
             category: 'Frontend'
         },
         {
             name: 'HTML5 & CSS3',
             level: 88,
             color: '#e34f26',
-            icon: '🌐',
+            icon: <SiHtml5 />,
             category: 'Frontend'
         },
         {
             name: 'Firebase',
             level: 88,
             color: '#ffca28',
-            icon: '🔥',
+            icon: <SiFirebase />,
             category: 'Backend'
         },
         {
             name: 'REST APIs',
             level: 88,
             color: '#339933',
-            icon: '🔗',
+            icon: <FaLink />,
             category: 'Backend'
         },
         {
             name: 'Python Django',
             level: 75,
             color: '#092e20',
-            icon: '🐍',
+            icon: <FaPython />,
             category: 'Backend'
         },
         {
             name: 'Context API',
             level: 88,
             color: '#764abc',
-            icon: '🔄',
+            icon: <MdSync />,
             category: 'State Management'
         },
-
+        {
+            name: 'React Query',
+            level: 85,
+            color: '#ff4154',
+            icon: <MdSearch />,
+            category: 'State Management'
+        },
         {
             name: 'Real-Time Chat',
             level: 88,
             color: '#25d366',
-            icon: '💬',
+            icon: <FaComments />,
             category: 'Real-Time'
         },
         {
             name: 'Push Notifications',
             level: 88,
             color: '#ff6b6b',
-            icon: '🔔',
+            icon: <FaBell />,
             category: 'Real-Time'
         },
-
+        {
+            name: 'Geolocation Services',
+            level: 85,
+            color: '#4285f4',
+            icon: <MdLocationOn />,
+            category: 'Mobile'
+        },
         {
             name: 'Git/GitHub',
             level: 88,
             color: '#f05032',
-            icon: '📚',
+            icon: <FaGitAlt />,
             category: 'Tools'
         },
         {
-            name: 'EAS Build',
+            name: 'EAS Build & Deploy',
             level: 85,
             color: '#4630eb',
-            icon: '🔨',
+            icon: <MdRocket />,
+            category: 'Tools'
+        },
+        {
+            name: 'CI/CD Automation',
+            level: 82,
+            color: '#2088ff',
+            icon: <MdSettings />,
             category: 'Tools'
         }
     ];
 
     const categories = [
-        { name: 'All', icon: '🌟', count: 14 },
-        { name: 'Mobile', icon: '📱', count: 2 },
-        { name: 'Frontend', icon: '💻', count: 3 },
+        { name: 'All', icon: '⭐', count: 18 },
+        { name: 'Mobile', icon: '📱', count: 3 },
+        { name: 'Frontend', icon: '💻', count: 4 },
         { name: 'Desktop', icon: '🖥️', count: 1 },
         { name: 'Backend', icon: '🔧', count: 3 },
-        { name: 'State Management', icon: '🔄', count: 1 },
+        { name: 'State Management', icon: '🔄', count: 2 },
         { name: 'Real-Time', icon: '⚡', count: 2 },
-        { name: 'Tools', icon: '🛠️', count: 2 }
+        { name: 'Tools', icon: '🛠️', count: 3 }
     ];
 
     // Filter skills based on selected category
@@ -285,15 +320,17 @@ const Skills = () => {
                     <h3 className="additional-title">Also Familiar With</h3>
                     <div className="tags-container">
                         {[
-                            'React Navigation', 'Axios', 'Firebase FCM', 'Firestore',
-                            'Firebase Auth', 'JWT Tokens', 'SQLite', 'Metro Bundler',
+                            'React Navigation', 'Expo Router', 'Axios', 'Firebase FCM', 'Firestore',
+                            'Firebase Auth', 'Apple Sign-In', 'Google Sign-In', 'JWT Tokens', 
+                            'expo-secure-store', 'SQLite', 'Metro Bundler', 'Jest Testing',
                             'React DevTools', 'Chrome DevTools', 'ESLint', 'Prettier',
                             'VS Code', 'npm', 'yarn', 'GitLab', 'Patch Package',
-                            'Component Architecture', 'Responsive Design',
-                            'Code Splitting', 'Lazy Loading', 'Error Handling',
-                            'Real-Time Messaging', 'FCM Push', 'Image Upload', 
-                            'Media Handling', 'Live Updates', 'Chat UI',
-                            'Electron IPC', 'Desktop Apps', 'Cross-Platform'
+                            'Component Architecture', 'Responsive Design', 'WebView Integration',
+                            'Code Splitting', 'Lazy Loading', 'Error Handling', 'Multi-Portal Routing',
+                            'Real-Time Messaging', 'FCM Push', 'Image Upload', 'Document Management',
+                            'Digital Signatures', 'Geofencing', 'Location Services', 'Attendance Tracking',
+                            'Media Handling', 'Live Updates', 'Chat UI', 'Performance Reviews',
+                            'Electron IPC', 'Desktop Apps', 'Cross-Platform', 'App Store Deployment'
                         ].map((tag, index) => (
                             <motion.span
                                 key={tag}

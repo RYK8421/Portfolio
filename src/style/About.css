@@ -207,6 +207,8 @@
 
 .card-icon {
   font-size: 1.5rem;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.6));
 }
 
 .main-visual {

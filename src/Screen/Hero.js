@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../style/Hero.css';
 import { downloadCVAsPDF } from '../utils/cvGenerator';
+import profileImage from '../images/image.png';
 
 
 const Hero = () => {
@@ -49,7 +50,7 @@ const Hero = () => {
 
                     <motion.p variants={textVariants} className="hero-description">
                         Building seamless cross-platform applications - mobile apps with React Native, 
-                        web apps with React.js, and desktop apps with Electron. 1.5+ years of experience 
+                        web apps with React.js, and desktop apps with Electron. 2+ years of experience 
                         creating efficient, user-friendly solutions across all platforms.
                     </motion.p>
 
@@ -69,13 +70,15 @@ const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <div className="floating-shapes">
+                    {/* <div className="floating-shapes">
                         <div className="shape shape-1"></div>
                         <div className="shape shape-2"></div>
                         <div className="shape shape-3"></div>
-                    </div>
+                    </div> */}
                     <div className="profile-container">
-                        <div className="profile-image"></div>
+                        <div className="profile-image">
+                            <img src={profileImage} alt="Ridu Krishna C" />
+                        </div>
                     </div>
                 </motion.div>
             </div>

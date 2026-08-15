@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FaBuilding, FaUsers, FaGlobe, FaLink, FaDesktop } from 'react-icons/fa';
 import '../style/Projects.css';
 
 function Projects() {
@@ -8,10 +9,10 @@ function Projects() {
     const projects = [
         {
             id: 1,
-            title: "HR Connect Mobile App",
-            description: "Cross-platform HR management application serving 500+ employees with real-time task management, messaging, push notifications, and employee engagement features including polls, birthday tracking, and social posts.",
-            image: "👥",
-            tech: ["React Native", "Expo", "Firebase", "Context API"],
+            title: "RootHR Mobile App",
+            description: "Enterprise-level cross-platform HR management application built with React Native, Expo, and TypeScript. Features geolocation-based attendance tracking with geofencing, shift scheduling, leave management, document handling with digital signatures, performance reviews, and team communication. Multi-portal architecture supporting employees, employers, admins, and partners. Implements Apple/Google Sign-In, React Query for state management, Expo Router for navigation, push notifications, and real-time messaging. Production-ready with automated CI/CD via EAS, available on iOS and Android app stores at version 1.0.8.",
+            icon: <FaBuilding />,
+            tech: ["React Native", "TypeScript", "Expo SDK 54", "React Query", "EAS", "Geolocation"],
             category: "mobile",
             liveUrl: "#",
             githubUrl: "#",
@@ -19,10 +20,10 @@ function Projects() {
         },
         {
             id: 2,
-            title: "Real-Time Task System",
-            description: "Task assignment and tracking system with file attachments (PDF, Images, Documents), real-time updates, and messaging functionality. Reduced task completion time by 30%.",
-            image: "✅",
-            tech: ["React Native", "Firebase", "FCM", "Axios"],
+            title: "Blazr HR Mobile App",
+            description: "Comprehensive cross-platform HR management application serving 500+ employees with integrated features: Real-time task management system with file attachments and messaging, employee engagement module with polls and birthday tracking, push notification system with FCM, real-time chat with group messaging and media sharing, social post creation with reactions and comments, and 15+ custom reusable components. Reduced task completion time by 30%.",
+            icon: <FaUsers />,
+            tech: ["React Native", "Expo", "Firebase", "Context API", "FCM", "Socket.io"],
             category: "mobile",
             liveUrl: "#",
             githubUrl: "#",
@@ -30,20 +31,9 @@ function Projects() {
         },
         {
             id: 3,
-            title: "Employee Engagement Module",
-            description: "Interactive features including poll creation with real-time voting results, birthday tracking with automated reminders, and staff social activity feeds for enhanced workplace engagement.",
-            image: "🎉",
-            tech: ["React Native", "Firestore", "Push Notifications"],
-            category: "mobile",
-            liveUrl: "#",
-            githubUrl: "#",
-            featured: true
-        },
-        {
-            id: 4,
             title: "Portfolio Website",
             description: "Modern and responsive portfolio website showcasing projects, skills, and experience. Features smooth animations with Framer Motion, interactive UI components, contact form with email integration, and CV download functionality.",
-            image: "🌐",
+            icon: <FaGlobe />,
             tech: ["React.js", "Framer Motion", "CSS3", "Vercel"],
             category: "website",
             liveUrl: "#",
@@ -51,21 +41,10 @@ function Projects() {
             featured: true
         },
         {
-            id: 5,
-            title: "Custom Component Library",
-            description: "Reusable component library with 15+ custom components including modals, alert dialogs, skeleton loaders, navigation bars, and header components for consistent UI/UX.",
-            image: "🧩",
-            tech: ["React Native", "Custom Hooks", "Styled Components"],
-            category: "mobile",
-            liveUrl: "#",
-            githubUrl: "#",
-            featured: false
-        },
-        {
-            id: 6,
+            id: 4,
             title: "API Services Layer",
             description: "Robust API integration layer handling 50+ endpoints with proper error handling, loading states, and retry logic. Implemented efficient data fetching and caching strategies.",
-            image: "🔗",
+            icon: <FaLink />,
             tech: ["Axios", "REST API", "Error Handling", "Async/Await"],
             category: "mobile",
             liveUrl: "#",
@@ -73,43 +52,10 @@ function Projects() {
             featured: false
         },
         {
-            id: 7,
-            title: "Real-Time Chat System",
-            description: "Full-featured real-time messaging system with one-on-one and group chats, typing indicators, read receipts, message status, online presence, and media sharing capabilities.",
-            image: "💬",
-            tech: ["Socket.io", "React Native", "Firebase", "Real-Time DB"],
-            category: "mobile",
-            liveUrl: "#",
-            githubUrl: "#",
-            featured: true
-        },
-        {
-            id: 8,
-            title: "Social Post Creation System",
-            description: "Feature-rich social posting platform where users can create posts with title, description, photos, mentions, location tags, and links. Interactive engagement with emoji reactions (like, love, laugh, etc.) and threaded comments for community interaction.",
-            image: "📝",
-            tech: ["React Native", "Geolocation", "Image Picker"],
-            category: "mobile",
-            liveUrl: "#",
-            githubUrl: "#",
-            featured: true
-        },
-        {
-            id: 9,
-            title: "Push Notification System",
-            description: "Comprehensive push notification system with Firebase Cloud Messaging (FCM), scheduled notifications, notification channels, deep linking, and custom notification actions for enhanced user engagement.",
-            image: "🔔",
-            tech: ["Firebase FCM", "React Native", "Background Tasks", "Deep Linking"],
-            category: "mobile",
-            liveUrl: "#",
-            githubUrl: "#",
-            featured: true
-        },
-        {
-            id: 10,
+            id: 5,
             title: "Blaze HR Desktop Application",
             description: "Cross-platform desktop chat application built with Electron for company internal communication. Features real-time messaging with Firebase, QR code authentication with Google OAuth, and hybrid storage architecture that reduces Firebase costs by auto-syncing to database.",
-            image: "💻",
+            icon: <FaDesktop />,
             tech: ["Electron", "Firebase", "JavaScript", "Google OAuth"],
             category: "desktop",
             liveUrl: "#",
@@ -215,7 +161,7 @@ function Projects() {
                             )}
 
                             <div className="project-image">
-                                <span className="project-emoji">{project.image}</span>
+                                <span className="project-icon">{project.icon}</span>
                             </div>
 
                             <div className="project-content">

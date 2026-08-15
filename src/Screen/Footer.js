@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import '../style/Footer.css';
 
 const Footer = () => {
@@ -25,8 +26,8 @@ const Footer = () => {
     const socialLinks = [
         // { name: 'GitHub', icon: '💻', url: 'https://github.com/RYK8421' },
         { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/ridu-krishna-c-511079185/' },
-        { name: 'Email', icon: '📧', url: 'mailto:ridu3668@gmail.com' },
-        { name: 'Phone', icon: '📱', url: 'tel:+918139008554' }
+        { name: 'Email', icon: '✉️', url: 'mailto:ridu3668@gmail.com' },
+        { name: 'Phone', icon: '�', url: 'tel:+918139008554' }
     ];
 
     const footerVariants = {
