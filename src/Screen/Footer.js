@@ -71,7 +71,7 @@ const Footer = () => {
                 >
                     <div className="bottom-content">
                         <p className="copyright">
-                            © {currentYear} Ridu Krishna C. Frontend Developer specializing in React.js & React Native.
+                            © 2024 Ridu Krishna C. Frontend Developer specializing in React.js & React Native.
                         </p>
 
                         <div className="footer-extra">
